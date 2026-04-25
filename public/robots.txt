@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://studenttools.app/sitemap.xml
+
+# Block crawlers from non-essential paths
+Disallow: /api/

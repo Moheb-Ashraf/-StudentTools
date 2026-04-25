@@ -1,0 +1,132 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', 'Cairo', sans-serif;
+    background-color: #0f1240;
+    color: #f0f4ff;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  :lang(ar) {
+    font-family: 'Cairo', 'Plus Jakarta Sans', sans-serif;
+  }
+
+  ::selection {
+    background: #5b6ef5;
+    color: white;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #0f1240;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #373fd4;
+    border-radius: 3px;
+  }
+}
+
+@layer components {
+  .hero-gradient {
+    background: radial-gradient(ellipse 80% 60% at 50% -10%, #373fd420 0%, transparent 70%),
+                radial-gradient(ellipse 40% 30% at 80% 50%, #5b6ef510 0%, transparent 60%);
+  }
+
+  .card {
+    @apply bg-ink-900/60 border border-ink-700/40 rounded-2xl backdrop-blur-sm;
+  }
+
+  .card-glow {
+    box-shadow: 0 0 0 1px rgba(91,110,245,0.15), 0 8px 32px rgba(15,18,64,0.6);
+  }
+
+  .btn-primary {
+    @apply bg-ink-500 hover:bg-ink-400 text-white font-semibold px-6 py-3 rounded-xl 
+           transition-all duration-200 active:scale-95 cursor-pointer
+           shadow-lg shadow-ink-500/20 hover:shadow-ink-500/40;
+  }
+
+  .btn-secondary {
+    @apply bg-ink-900 hover:bg-ink-800 border border-ink-600/40 hover:border-ink-500/60
+           text-ink-200 hover:text-white font-semibold px-6 py-3 rounded-xl 
+           transition-all duration-200 active:scale-95 cursor-pointer;
+  }
+
+  .btn-danger {
+    @apply bg-rose-500/10 hover:bg-rose-500/20 border border-rose-500/30
+           text-rose-400 font-semibold px-4 py-2 rounded-lg 
+           transition-all duration-200 active:scale-95 cursor-pointer text-sm;
+  }
+
+  .input-field {
+    @apply bg-ink-900/80 border border-ink-700/50 focus:border-ink-500 
+           text-white placeholder-ink-400 rounded-xl px-4 py-3 w-full
+           transition-colors duration-200 outline-none focus:ring-2 focus:ring-ink-500/20;
+  }
+
+  .section-tag {
+    @apply inline-flex items-center gap-2 bg-ink-500/10 border border-ink-500/20 
+           text-ink-300 text-sm font-semibold px-4 py-1.5 rounded-full;
+  }
+
+  .ad-placeholder {
+    @apply border-2 border-dashed border-ink-700/40 rounded-xl p-6 text-center 
+           text-ink-500 text-sm bg-ink-900/20 my-8;
+  }
+
+  .faq-item {
+    @apply border border-ink-700/40 rounded-xl overflow-hidden mb-3 
+           transition-all duration-300;
+  }
+
+  .nav-link {
+    @apply text-ink-300 hover:text-white font-medium transition-colors duration-200 
+           text-sm px-3 py-2 rounded-lg hover:bg-ink-700/30;
+  }
+
+  .result-badge {
+    @apply text-5xl font-extrabold font-display;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    background: linear-gradient(135deg, #a4bafd 0%, #7a93fa 40%, #5b6ef5 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .text-gradient-gold {
+    background: linear-gradient(135deg, #fde68a 0%, #fbbf24 60%, #f59e0b 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .animate-delay-100 { animation-delay: 100ms; }
+  .animate-delay-200 { animation-delay: 200ms; }
+  .animate-delay-300 { animation-delay: 300ms; }
+  .animate-delay-400 { animation-delay: 400ms; }
+
+  .glass {
+    background: rgba(26, 31, 107, 0.3);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+}
