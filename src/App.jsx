@@ -4,16 +4,37 @@ import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import PageLoader from './components/PageLoader'
 
-const GPACalculator = lazy(() => import('./pages/GPACalculator'))
-const PercentageCalculator = lazy(() => import('./pages/PercentageCalculator'))
-const FinalGradeCalculator = lazy(() => import('./pages/FinalGradeCalculator'))
-const GPAtoPercentageConverter = lazy(() => import('./pages/GPAtoPercentageConverter'))
-const AttendanceCalculator = lazy(() => import('./pages/AttendanceCalculator'))
-const PrivacyPolicy = lazy(() => import('./pages/PrivacyPolicy'))
-const TermsOfService = lazy(() => import('./pages/TermsOfService'))
-const AboutUs = lazy(() => import('./pages/AboutUs'))
-const ContactUs = lazy(() => import('./pages/ContactUs'))
-const Home = lazy(() => import('./pages/Home'))
+function lazyWithRetry(componentImport) {
+  return lazy(async () => {
+    const pageHasAlreadyBeenForceRefreshed = JSON.parse(
+      window.sessionStorage.getItem('chunk_retry_refreshed') || 'false'
+    )
+
+    try {
+      const component = await componentImport()
+      window.sessionStorage.setItem('chunk_retry_refreshed', 'false')
+      return component
+    } catch (error) {
+      if (!pageHasAlreadyBeenForceRefreshed) {
+        window.sessionStorage.setItem('chunk_retry_refreshed', 'true')
+        window.location.reload()
+        return { default: () => null }
+      }
+      throw error
+    }
+  })
+}
+
+const GPACalculator = lazyWithRetry(() => import('./pages/GPACalculator'))
+const PercentageCalculator = lazyWithRetry(() => import('./pages/PercentageCalculator'))
+const FinalGradeCalculator = lazyWithRetry(() => import('./pages/FinalGradeCalculator'))
+const GPAtoPercentageConverter = lazyWithRetry(() => import('./pages/GPAtoPercentageConverter'))
+const AttendanceCalculator = lazyWithRetry(() => import('./pages/AttendanceCalculator'))
+const PrivacyPolicy = lazyWithRetry(() => import('./pages/PrivacyPolicy'))
+const TermsOfService = lazyWithRetry(() => import('./pages/TermsOfService'))
+const AboutUs = lazyWithRetry(() => import('./pages/AboutUs'))
+const ContactUs = lazyWithRetry(() => import('./pages/ContactUs'))
+const Home = lazyWithRetry(() => import('./pages/Home'))
 
 export default function App() {
   return (
