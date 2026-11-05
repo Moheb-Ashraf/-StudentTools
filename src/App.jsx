@@ -3,6 +3,7 @@ import { Routes, Route, Navigate } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import PageLoader from './components/PageLoader'
+import ScrollToTop from './components/ScrollToTop'
 
 function lazyWithRetry(componentImport) {
   return lazy(async () => {
@@ -39,6 +40,7 @@ const Home = lazyWithRetry(() => import('./pages/Home'))
 export default function App() {
   return (
     <div className="min-h-screen flex flex-col bg-ink-950">
+      <ScrollToTop />
       <Navbar />
       <main className="flex-1">
         <Suspense fallback={<PageLoader />}>
