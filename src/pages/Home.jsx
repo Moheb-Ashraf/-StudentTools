@@ -9,22 +9,24 @@ const homeSchema = {
   "@type": "WebPage",
   "name": "Student Tools | أدوات الطلاب",
   "description": "Free academic tools: GPA calculator, percentage calculator, final grade calculator. أدوات أكاديمية مجانية للطلاب.",
-  "url": "https://studenttools.app",
+  "url": "https://student-tools-two.vercel.app",
   "mainEntity": {
     "@type": "ItemList",
     "itemListElement": [
-      { "@type": "ListItem", "position": 1, "url": "https://studenttools.app/gpa-calculator", "name": "GPA Calculator | حاسبة المعدل التراكمي" },
-      { "@type": "ListItem", "position": 2, "url": "https://studenttools.app/percentage-calculator", "name": "Percentage Calculator | حاسبة النسبة المئوية" },
-      { "@type": "ListItem", "position": 3, "url": "https://studenttools.app/final-grade-calculator", "name": "Final Grade Calculator | حاسبة الدرجة النهائية" }
+      { "@type": "ListItem", "position": 1, "url": "https://student-tools-two.vercel.app/gpa-calculator", "name": "GPA Calculator | حاسبة المعدل التراكمي" },
+      { "@type": "ListItem", "position": 2, "url": "https://student-tools-two.vercel.app/percentage-calculator", "name": "Percentage Calculator | حاسبة النسبة المئوية" },
+      { "@type": "ListItem", "position": 3, "url": "https://student-tools-two.vercel.app/final-grade-calculator", "name": "Final Grade Calculator | حاسبة الدرجة النهائية" },
+      { "@type": "ListItem", "position": 4, "url": "https://student-tools-two.vercel.app/gpa-converter", "name": "GPA Converter | محول المعدل إلى نسبة مئوية" },
+      { "@type": "ListItem", "position": 5, "url": "https://student-tools-two.vercel.app/attendance-calculator", "name": "Attendance Calculator | حاسبة نسبة الغياب والحرمان" }
     ]
   }
 }
 
 const stats = [
   { num: '100%', label: 'Free Forever', labelAr: 'مجاني للأبد' },
-  { num: '3', label: 'Student Tools', labelAr: 'أداة أكاديمية' },
+  { num: '5', label: 'Student Tools', labelAr: 'أدوات أكاديمية' },
   { num: '0', label: 'Registration Needed', labelAr: 'بدون تسجيل' },
-  { num: '4.0', label: 'GPA Scale', labelAr: 'مقياس المعدل' },
+  { num: '4.0 & 5.0', label: 'GPA Scales', labelAr: 'مقاييس المعدل' },
 ]
 
 export default function Home() {
@@ -96,7 +98,7 @@ export default function Home() {
               <span className="block text-base font-arabic font-normal text-ink-400 mt-1">حاسبات أكاديمية مجانية</span>
             </h2>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
             <ToolCard
               to="/gpa-calculator"
               icon="🎓"
@@ -120,6 +122,22 @@ export default function Home() {
               titleAr="حاسبة الدرجة النهائية"
               description="Find the exact grade needed on your final exam to achieve your goal grade."
               color="emerald"
+            />
+            <ToolCard
+              to="/gpa-converter"
+              icon="🔄"
+              title="GPA Converter"
+              titleAr="تحويل المعدل لنسبة مئوية"
+              description="Convert between 4.0 scale, 5.0 scale, and percentage with standard formulas."
+              color="ink"
+            />
+            <ToolCard
+              to="/attendance-calculator"
+              icon="⏱️"
+              title="Attendance Calculator"
+              titleAr="حاسبة نسبة الغياب والحرمان"
+              description="Calculate missed classes and find how many lectures remain before reaching 25% deprivation limit."
+              color="rose"
             />
           </div>
         </section>

@@ -16,7 +16,11 @@
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Student Tools | أدوات الطلاب" />
-    <meta property="og:image" content="https://studenttools.app/og-image.jpg" />
+    <meta property="og:url" content="https://student-tools-two.vercel.app/" />
+    <meta property="og:image" content="https://student-tools-two.vercel.app/favicon.svg" />
+
+    <!-- Web App Manifest for PWA -->
+    <link rel="manifest" href="/manifest.json" />
 
     <!-- Arabic / RTL font support -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -29,20 +33,16 @@
     <!-- Google AdSense (replace with your publisher ID) -->
     <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script> -->
 
-    <!-- Structured Data: Organization -->
+    <!-- Structured Data: WebSite for Google Search Site Name -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "WebSite",
-      "name": "Student Tools | أدوات الطلاب",
-      "url": "https://studenttools.app",
+      "name": "Student Tools",
+      "alternateName": ["أدوات الطلاب", "StudentTools"],
+      "url": "https://student-tools-two.vercel.app",
       "description": "Free academic tools for students: GPA calculator, grade tools. أدوات مجانية للطلاب.",
-      "inLanguage": ["en", "ar"],
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": "https://studenttools.app/search?q={search_term_string}",
-        "query-input": "required name=search_term_string"
-      }
+      "inLanguage": ["en", "ar"]
     }
     </script>
   </head>

@@ -1,0 +1,20 @@
+{
+  "short_name": "StudentTools",
+  "name": "Student Tools | أدوات الطلاب",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "type": "image/svg+xml",
+      "sizes": "192x192 512x512",
+      "purpose": "any maskable"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#0a0d1d",
+  "theme_color": "#1a1f6b",
+  "display": "standalone",
+  "orientation": "portrait",
+  "description": "حاسبة المعدل التراكمي GPA وحاسبات الدرجات والغياب للطلاب مجاناً بدون تسجيل.",
+  "lang": "ar-EG",
+  "dir": "rtl"
+}

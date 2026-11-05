@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from 'react'
+import React, { useState, useCallback, useEffect } from 'react'
 import SEOMeta from '../components/SEOMeta'
 import FAQ from '../components/FAQ'
 import AdBanner from '../components/AdBanner'
@@ -95,8 +95,23 @@ const defaultSubjects = [
 ]
 
 export default function GPACalculator() {
-  const [subjects, setSubjects] = useState(defaultSubjects)
+  const [subjects, setSubjects] = useState(() => {
+    try {
+      const saved = localStorage.getItem('student_tools_gpa_data')
+      if (saved) {
+        const parsed = JSON.parse(saved)
+        if (Array.isArray(parsed) && parsed.length > 0) return parsed
+      }
+    } catch (e) {}
+    return defaultSubjects
+  })
   const [result, setResult] = useState(null)
+
+  useEffect(() => {
+    try {
+      localStorage.setItem('student_tools_gpa_data', JSON.stringify(subjects))
+    } catch (e) {}
+  }, [subjects])
 
   const addSubject = () => {
     setSubjects(prev => [...prev, { id: uid(), name: '', grade: 'B', credits: '3' }])
@@ -299,6 +314,17 @@ export default function GPACalculator() {
                     ))}
                   </tbody>
                 </table>
+              </div>
+
+              {/* Print / Save button */}
+              <div className="mt-6 pt-4 border-t border-ink-700/30 flex justify-center">
+                <button
+                  onClick={() => window.print()}
+                  className="btn-secondary text-xs sm:text-sm px-4 py-2 inline-flex items-center gap-2 font-arabic"
+                >
+                  <span>🖨️</span>
+                  <span>طباعة أو حفظ التقرير PDF / Print Report</span>
+                </button>
               </div>
             </div>
           )}

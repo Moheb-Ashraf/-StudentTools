@@ -5,6 +5,8 @@ const navLinks = [
   { to: '/gpa-calculator', label: 'GPA Calculator', labelAr: 'حاسبة المعدل' },
   { to: '/percentage-calculator', label: 'Percentage', labelAr: 'النسبة المئوية' },
   { to: '/final-grade-calculator', label: 'Final Grade', labelAr: 'الدرجة النهائية' },
+  { to: '/gpa-converter', label: 'GPA Converter', labelAr: 'تحويل المعدل' },
+  { to: '/attendance-calculator', label: 'Attendance', labelAr: 'حاسبة الغياب' },
 ]
 
 export default function Navbar() {

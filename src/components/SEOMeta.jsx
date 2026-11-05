@@ -17,14 +17,15 @@ export default function SEOMeta({
       <title>{fullTitle}</title>
       <meta name="description" content={description} />
       {keywords && <meta name="keywords" content={keywords} />}
-      {canonical && <link rel="canonical" href={`https://studenttools.app${canonical}`} />}
+      {canonical && <link rel="canonical" href={`https://student-tools-two.vercel.app${canonical}`} />}
 
       {/* Open Graph */}
       <meta property="og:title" content={ogTitle || fullTitle} />
       <meta property="og:description" content={ogDescription || description} />
-      <meta property="og:url" content={`https://studenttools.app${canonical}`} />
+      <meta property="og:url" content={`https://student-tools-two.vercel.app${canonical || '/'}`} />
       <meta property="og:type" content="website" />
-      <meta property="og:image" content="https://studenttools.app/og-image.jpg" />
+      <meta property="og:image" content="https://student-tools-two.vercel.app/favicon.svg" />
+      <meta property="og:site_name" content="Student Tools | أدوات الطلاب" />
       <meta property="og:locale" content="ar_EG" />
       <meta property="og:locale:alternate" content="en_US" />
 
