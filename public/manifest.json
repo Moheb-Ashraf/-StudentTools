@@ -10,8 +10,8 @@
     }
   ],
   "start_url": "/",
-  "background_color": "#0a0d1d",
-  "theme_color": "#1a1f6b",
+  "background_color": "#0B0F19",
+  "theme_color": "#4F46E5",
   "display": "standalone",
   "orientation": "portrait",
   "description": "حاسبة المعدل التراكمي GPA وحاسبات الدرجات والغياب للطلاب مجاناً بدون تسجيل.",

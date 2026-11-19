@@ -1,6 +1,11 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ['./index.html', './src/**/*.{js,jsx}'],
+  content: [
+    './app/**/*.{js,ts,jsx,tsx,mdx}',
+    './components/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/**/*.{js,ts,jsx,tsx,mdx}',
+    './index.html',
+  ],
   theme: {
     extend: {
       fontFamily: {
@@ -9,53 +14,62 @@ export default {
         arabic: ['Cairo', 'sans-serif'],
       },
       colors: {
-        ink: {
-          50: '#f0f4ff',
-          100: '#e0e9ff',
-          200: '#c7d6fe',
-          300: '#a4bafd',
-          400: '#7a93fa',
-          500: '#5b6ef5',
-          600: '#4350ea',
-          700: '#373fd4',
-          800: '#2e35ab',
-          900: '#1a1f6b',
-          950: '#0f1240',
+        surface: {
+          base: '#0B0F19',
+          card: '#111827',
+          cardHover: '#161F32',
+          cardLight: '#1E293B',
+          border: 'rgba(255, 255, 255, 0.08)',
+          borderHover: 'rgba(99, 102, 241, 0.35)',
         },
-        amber: {
-          400: '#fbbf24',
-          500: '#f59e0b',
+        brand: {
+          50: '#EEF2FF',
+          100: '#E0E7FF',
+          200: '#C7D2FE',
+          300: '#A5B4FC',
+          400: '#818CF8',
+          500: '#6366F1',
+          600: '#4F46E5',
+          700: '#4338CA',
         },
         emerald: {
-          400: '#34d399',
-          500: '#10b981',
+          400: '#34D399',
+          500: '#10B981',
+          600: '#059669',
+        },
+        amber: {
+          400: '#FBBF24',
+          500: '#F59E0B',
+          600: '#D97706',
+        },
+        cyan: {
+          400: '#22D3EE',
+          500: '#06B6D4',
+          600: '#0891B2',
         },
         rose: {
-          400: '#fb7185',
-          500: '#f43f5e',
+          400: '#FB7185',
+          500: '#F43F5E',
+          600: '#E11D48',
         },
       },
-      backgroundImage: {
-        'grid-ink': "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Cpath d='M0 0h40v40H0z' fill='none'/%3E%3Cpath d='M0 0h1v40H0zm39 0h1v40h-1zM0 0h40v1H0zm0 39h40v1H0z' fill='%235b6ef520'/%3E%3C/svg%3E\")",
-      },
       animation: {
-        'fade-up': 'fadeUp 0.6s ease forwards',
-        'fade-in': 'fadeIn 0.4s ease forwards',
-        'pulse-slow': 'pulse 3s infinite',
-        'slide-in': 'slideIn 0.5s ease forwards',
+        'fade-up': 'fadeUp 0.5s ease-out forwards',
+        'fade-in': 'fadeIn 0.3s ease-out forwards',
+        'pulse-glow': 'pulseGlow 4s infinite',
       },
       keyframes: {
         fadeUp: {
-          from: { opacity: 0, transform: 'translateY(24px)' },
+          from: { opacity: 0, transform: 'translateY(16px)' },
           to: { opacity: 1, transform: 'translateY(0)' },
         },
         fadeIn: {
           from: { opacity: 0 },
           to: { opacity: 1 },
         },
-        slideIn: {
-          from: { opacity: 0, transform: 'translateX(-16px)' },
-          to: { opacity: 1, transform: 'translateX(0)' },
+        pulseGlow: {
+          '0%, 100%': { opacity: 0.4 },
+          '50%': { opacity: 0.8 },
         },
       },
     },
