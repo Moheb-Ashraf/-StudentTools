@@ -91,7 +91,12 @@ export default function ContactPage() {
 
         <div className="mt-8 pt-6 border-t border-white/[0.06] text-center text-xs text-slate-500">
           أو يمكنك مراسلتنا مباشرة عبر البريد الإلكتروني المعتمد:
-          <span className="block font-mono text-slate-300 mt-1 font-bold">support@studenttools.app</span>
+          <a
+            href="mailto:studenttoolapp@gmail.com"
+            className="block font-mono text-cyan-400 hover:text-cyan-300 mt-1 font-bold transition-colors"
+          >
+            studenttoolapp@gmail.com
+          </a>
         </div>
       </div>
     </div>

@@ -94,6 +94,8 @@ export default function Footer() {
         <div className="pt-8 border-t border-white/[0.06] flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
           <p>© {new Date().getFullYear()} Student Tools (أدوات الطلاب). جميع الحقوق محفوظة.</p>
           <div className="flex items-center gap-4">
+            <a href="mailto:studenttoolapp@gmail.com" className="hover:text-indigo-400 font-mono transition-colors">studenttoolapp@gmail.com</a>
+            <span>·</span>
             <Link href="/privacy-policy" className="hover:text-slate-300 transition-colors">سياسة الخصوصية</Link>
             <span>·</span>
             <Link href="/terms" className="hover:text-slate-300 transition-colors">شروط الاستخدام</Link>

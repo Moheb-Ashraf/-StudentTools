@@ -38,7 +38,7 @@ export default function PrivacyPolicyPage() {
 
           <h2 className="text-xl font-bold text-white">4. التواصل معنا</h2>
           <p>
-            إذا كان لديك أي استفسار بخصوص سياسة الخصوصية، يمكنك التواصل معنا في أي وقت عبر صفحة <a href="/contact" className="text-indigo-400 underline">اتصل بنا</a>.
+            إذا كان لديك أي استفسار بخصوص سياسة الخصوصية، يمكنك التواصل معنا في أي وقت عبر البريد الإلكتروني <a href="mailto:studenttoolapp@gmail.com" className="text-indigo-400 underline font-mono">studenttoolapp@gmail.com</a> أو عبر صفحة <a href="/contact" className="text-indigo-400 underline">اتصل بنا</a>.
           </p>
         </div>
       </div>
