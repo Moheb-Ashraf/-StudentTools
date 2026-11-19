@@ -65,7 +65,15 @@ export default function RootLayout({ children }) {
   return (
     <html lang="ar" dir="rtl" className="scroll-smooth">
       <head>
-        {/* Google Site Verification if present */}
+        {/* Google Fonts: Cairo, Plus Jakarta Sans, Sora */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Sora:wght@600;700;800&display=swap"
+          rel="stylesheet"
+        />
+
+        {/* Google Site Verification */}
         <meta name="google-site-verification" content="7BhiPiBLgMtOYvDWxB2U-ekTFQrqvbDCy7w5DLt2i28" />
 
         {/* Structured Data: WebSite Schema */}
