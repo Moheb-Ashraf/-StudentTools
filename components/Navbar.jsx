@@ -6,6 +6,7 @@ import { usePathname } from 'next/navigation'
 
 const navLinks = [
   { href: '/gpa-calculator', label: 'حاسبة المعدل', en: 'GPA', icon: '🎓', color: 'emerald' },
+  { href: '/schedule-maker', label: 'صانع الجدول', en: 'Schedule', icon: '📅', color: 'cyan' },
   { href: '/percentage-calculator', label: 'النسبة المئوية', en: 'Percentage', icon: '📊', color: 'indigo' },
   { href: '/final-grade-calculator', label: 'الدرجة المطلوبة', en: 'Final Exam', icon: '🎯', color: 'amber' },
   { href: '/gpa-converter', label: 'تحويل المعدل', en: 'Converter', icon: '🔄', color: 'cyan' },

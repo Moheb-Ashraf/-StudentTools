@@ -3,6 +3,7 @@ import Link from 'next/link'
 
 const tools = [
   { href: '/gpa-calculator', title: 'حاسبة المعدل التراكمي (GPA)', en: 'GPA Calculator' },
+  { href: '/schedule-maker', title: 'صانع الجدول الدراسي وتفادي التعارض', en: 'Schedule Maker' },
   { href: '/percentage-calculator', title: 'حاسبة النسبة المئوية', en: 'Percentage Calculator' },
   { href: '/final-grade-calculator', title: 'حاسبة درجة الامتحان النهائي', en: 'Final Grade Calculator' },
   { href: '/gpa-converter', title: 'تحويل المعدل إلى نسبة مئوية ومقياس 5', en: 'GPA to Percentage Converter' },

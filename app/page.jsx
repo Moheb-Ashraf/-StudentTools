@@ -20,6 +20,18 @@ const ALL_TOOLS = [
     highlight: true,
   },
   {
+    id: 'schedule',
+    category: 'schedule',
+    href: '/schedule-maker',
+    icon: '📅',
+    titleAr: 'صانع الجدول الدراسي وتفادي التعارض',
+    titleEn: 'SCHEDULE MAKER',
+    description: 'رتب مواعيد محاضراتك وسكاشنك الأسبوعية واكتشف أي تعارض في التوقيت فوراً مع ميزة تصدير الجدول كـ PDF.',
+    tag: 'جديد ومطلوب ⚡',
+    color: 'cyan',
+    highlight: true,
+  },
+  {
     id: 'percentage',
     category: 'grades',
     href: '/percentage-calculator',
@@ -150,8 +162,9 @@ export default function HomePage() {
           {/* Category Tabs */}
           <div className="flex flex-wrap items-center justify-center gap-2 font-arabic text-xs sm:text-sm">
             {[
-              { id: 'all', label: 'جميع الأدوات (5)' },
+              { id: 'all', label: 'جميع الأدوات (6)' },
               { id: 'gpa', label: '🎓 حساب المعدل (GPA)' },
+              { id: 'schedule', label: '📅 تنظيم الجدول' },
               { id: 'grades', label: '📊 الامتحانات والنسب' },
               { id: 'attendance', label: '⏱️ الحضور والغياب' },
             ].map((cat) => (

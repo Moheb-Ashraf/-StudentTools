@@ -16,6 +16,12 @@ export default function sitemap() {
       priority: 0.9,
     },
     {
+      url: `${baseUrl}/schedule-maker`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    {
       url: `${baseUrl}/percentage-calculator`,
       lastModified: currentDate,
       changeFrequency: 'weekly',
